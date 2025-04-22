@@ -42,6 +42,7 @@
 ```
 
 `Процесс настройки маршрутизатора и изменение приоритета при обрыве линии:`
+
 ![1](https://github.com/Mr-Alex01/keepalived/blob/main/img/1.jpg)
 
 
@@ -58,19 +59,33 @@
 5. `Заполните здесь этапы выполнения, если требуется ....`
 6. 
 
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
+`Получившийся bash-скрипт check_nginx.sh:`
+
+#!/bin/bash
+
+# Проверка на прослушку порта 80
+if ! netstat -tuln | grep -q ':80\s'; then
+    exit 1
+fi
+
+# Проверка на наличие index.html
+if [ ! -f /var/www/html/index.html ]; then
+    exit 1
+fi
+
+# Если всё ок
+exit 0
+ 
+  
 
 `Virtual IP до переезда на вирт. маш. 1 - (Master):`
+
 ![1](https://github.com/Mr-Alex01/keepalived/blob/main/img/2.jpg)
 
 `Имитация обрыва nginx на вирт. маш. 1 - (Master):`
+
 ![1](https://github.com/Mr-Alex01/keepalived/blob/main/img/3.jpg)
 
 `Миграция Virtual IP на вирт. маш. 2 (Backup):`
+
 ![1](https://github.com/Mr-Alex01/keepalived/blob/main/img/4.jpg)
