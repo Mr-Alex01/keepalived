@@ -41,8 +41,8 @@
 ....
 ```
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
+`Процесс настройки маршрутизатора и изменение приоритета при обрыве линии:`
+![1](https://github.com/Mr-Alex01/keepalived/blob/main/img/1.jpg)
 
 
 ---
@@ -66,7 +66,11 @@
 ....
 ```
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
+`Virtual IP до переезда на вирт. маш. 1 - (Master):`
+![1](https://github.com/Mr-Alex01/keepalived/blob/main/img/2.jpg)
 
- 
+`Имитация обрыва nginx на вирт. маш. 1 - (Master):`
+![1](https://github.com/Mr-Alex01/keepalived/blob/main/img/3.jpg)
+
+`Миграция Virtual IP на вирт. маш. 2 (Backup):`
+![1](https://github.com/Mr-Alex01/keepalived/blob/main/img/4.jpg)
